@@ -1,0 +1,22 @@
+notes
+
+
+
+ffmpeg -r 10 -i sky-diamonds-%02d.jpg -vcodec mpeg4 -y movie.mp4
+
+https://stackoverflow.com/questions/44947505/how-to-make-a-movie-out-of-images-in-python
+(r is framerate)
+
+
+https://video.stackexchange.com/questions/12905/repeat-loop-input-video-with-ffmpeg
+
+
+https://superuser.com/questions/590201/add-audio-to-video-using-ffmpeg
+
+
+ffmpeg -loop 1 -t 598 -framerate 10 -i sky-diamonds-%02d.jpg -i song.mp3 -c copy -map 0:v:0 -map 1:a:0 output.mp4
+
+
+# Install imagemagick (brew install imagemagick)
+
+convert -delay 0 -loop 0 *.jpg sky-diamonds.gif
